@@ -1,0 +1,51 @@
+/iitjhome/m22ma003/CV_Project/table_detection.py:190: DeprecationWarning: ANTIALIAS is deprecated and will be removed in Pillow 10 (2023-07-01). Use LANCZOS or Resampling.LANCZOS instead.
+  image = image.resize((self.min_width, self.min_height), Image.ANTIALIAS)
+tensor([[0.0000e+00, 7.5863e-04, 2.7300e-04, 5.5586e-04, 1.3832e-04],
+        [0.0000e+00, 7.6164e-04, 2.5370e-04, 8.3363e-04, 2.1406e-04],
+        [0.0000e+00, 1.1207e-03, 2.3586e-04, 6.6947e-04, 2.9335e-04],
+        [0.0000e+00, 1.1320e-03, 7.7499e-04, 6.3235e-04, 5.0741e-04],
+        [0.0000e+00, 7.7446e-04, 1.2755e-03, 1.1004e-03, 2.5172e-04],
+        [0.0000e+00, 4.1394e-04, 3.3695e-04, 6.0705e-04, 5.0344e-04],
+        [0.0000e+00, 1.0979e-03, 8.9787e-04, 5.4173e-04, 7.5318e-05],
+        [0.0000e+00, 7.8066e-04, 5.5300e-04, 1.2468e-03, 2.4181e-04],
+        [0.0000e+00, 6.0560e-04, 1.0338e-03, 8.1223e-04, 4.0769e-04],
+        [0.0000e+00, 1.0672e-03, 2.6390e-04, 6.1709e-04, 2.0020e-04],
+        [0.0000e+00, 1.0460e-03, 3.4580e-04, 5.1817e-04, 3.2760e-04],
+        [0.0000e+00, 6.3615e-04, 7.1345e-04, 1.0175e-03, 1.2012e-03],
+        [0.0000e+00, 1.1897e-03, 1.1666e-03, 3.2974e-05, 1.8200e-05],
+        [0.0000e+00, 7.3508e-04, 6.6249e-04, 1.1400e-03, 1.0556e-03],
+        [0.0000e+00, 7.8349e-04, 5.7381e-04, 7.1575e-04, 2.1604e-04],
+        [0.0000e+00, 1.1119e-03, 1.3195e-03, 3.4859e-04, 1.4924e-04],
+        [0.0000e+00, 8.0671e-04, 2.8756e-04, 1.1701e-03, 2.0384e-04],
+        [0.0000e+00, 7.7831e-04, 9.3950e-04, 1.0773e-03, 2.3388e-04],
+        [0.0000e+00, 7.0392e-04, 4.1425e-04, 1.1030e-03, 5.7480e-04],
+        [0.0000e+00, 7.7983e-04, 4.4773e-04, 1.3048e-03, 5.5329e-04],
+        [0.0000e+00, 6.6854e-04, 6.9343e-04, 1.1564e-03, 3.3852e-04],
+        [0.0000e+00, 1.1072e-03, 5.4055e-04, 5.1817e-04, 1.5652e-04],
+        [0.0000e+00, 7.7062e-04, 3.9676e-04, 1.1893e-03, 1.0920e-04],
+        [0.0000e+00, 7.5394e-04, 7.8886e-04, 1.3159e-03, 1.3359e-03],
+        [0.0000e+00, 7.2801e-04, 5.5147e-04, 1.0599e-03, 4.6229e-04],
+        [0.0000e+00, 7.7578e-04, 2.5662e-04, 9.3302e-04, 1.6380e-04],
+        [0.0000e+00, 8.0156e-04, 4.3863e-04, 5.8249e-04, 2.7300e-04],
+        [0.0000e+00, 7.6334e-04, 4.9505e-04, 8.1023e-04, 5.9697e-04],
+        [0.0000e+00, 7.5156e-04, 5.6785e-04, 1.1541e-03, 6.4793e-04],
+        [0.0000e+00, 4.0973e-04, 1.3068e-03, 7.1663e-04, 2.3296e-04],
+        [0.0000e+00, 7.5774e-04, 2.8938e-04, 1.1753e-03, 2.2932e-04],
+        [0.0000e+00, 7.5627e-04, 7.8625e-04, 8.6205e-04, 2.1840e-04]])
+torch.Size([32, 16, 651, 651])
+torch.Size([32, 16, 325, 325])
+torch.Size([32, 32, 325, 325])
+torch.Size([32, 32, 162, 162])
+torch.Size([32, 839808])
+Traceback (most recent call last):
+  File "/iitjhome/m22ma003/CV_Project/table_detection.py", line 304, in <module>
+    outputs = model(images)
+  File "/scratch/apps/anaconda3/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/iitjhome/m22ma003/CV_Project/table_detection.py", line 165, in forward
+    x = nn.functional.relu(self.fc1(x))
+  File "/scratch/apps/anaconda3/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/scratch/apps/anaconda3/lib/python3.9/site-packages/torch/nn/modules/linear.py", line 114, in forward
+    return F.linear(input, self.weight, self.bias)
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (32x839808 and 32768x32768)
