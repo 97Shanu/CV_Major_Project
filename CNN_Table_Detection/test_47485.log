@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "/iitjhome/m22ma003/CV_Project/table_detection.py", line 274, in <module>
+    train_dataset = TableDataset(annotation_file="/content/table_data/train_data/labels/train/0_annotations.csv", image_dir="/content/table_data/train_data/images/train", transform=transforms.ToTensor())
+  File "/iitjhome/m22ma003/CV_Project/table_detection.py", line 173, in __init__
+    self.annotations = pd.read_csv(annotation_file)
+  File "/scratch/apps/anaconda3/lib/python3.9/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/scratch/apps/anaconda3/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 680, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/scratch/apps/anaconda3/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 575, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/scratch/apps/anaconda3/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 933, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/scratch/apps/anaconda3/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 1217, in _make_engine
+    self.handles = get_handle(  # type: ignore[call-overload]
+  File "/scratch/apps/anaconda3/lib/python3.9/site-packages/pandas/io/common.py", line 789, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: '/content/table_data/train_data/labels/train/0_annotations.csv'

@@ -1,0 +1,52 @@
+/iitjhome/m22ma003/CV_Project/table_detection.py:190: DeprecationWarning: ANTIALIAS is deprecated and will be removed in Pillow 10 (2023-07-01). Use LANCZOS or Resampling.LANCZOS instead.
+  image = image.resize((self.min_width, self.min_height), Image.ANTIALIAS)
+tensor([[0.0000, 0.0007, 0.0003, 0.0012, 0.0003],
+        [0.0000, 0.0008, 0.0003, 0.0012, 0.0003],
+        [0.0000, 0.0008, 0.0009, 0.0010, 0.0004],
+        [0.0000, 0.0008, 0.0005, 0.0009, 0.0006],
+        [0.0000, 0.0004, 0.0003, 0.0006, 0.0004],
+        [0.0000, 0.0007, 0.0010, 0.0010, 0.0006],
+        [0.0000, 0.0008, 0.0004, 0.0010, 0.0003],
+        [0.0000, 0.0011, 0.0004, 0.0004, 0.0001],
+        [0.0000, 0.0008, 0.0013, 0.0012, 0.0002],
+        [0.0000, 0.0007, 0.0007, 0.0012, 0.0008],
+        [0.0000, 0.0007, 0.0006, 0.0012, 0.0008],
+        [0.0000, 0.0008, 0.0009, 0.0013, 0.0007],
+        [0.0000, 0.0004, 0.0003, 0.0005, 0.0002],
+        [0.0000, 0.0005, 0.0006, 0.0006, 0.0002],
+        [0.0000, 0.0011, 0.0003, 0.0006, 0.0005],
+        [0.0000, 0.0008, 0.0003, 0.0008, 0.0002],
+        [0.0000, 0.0004, 0.0007, 0.0007, 0.0004],
+        [0.0000, 0.0004, 0.0010, 0.0007, 0.0003],
+        [0.0000, 0.0006, 0.0007, 0.0010, 0.0012],
+        [0.0000, 0.0008, 0.0011, 0.0012, 0.0004],
+        [0.0000, 0.0007, 0.0007, 0.0011, 0.0011],
+        [0.0000, 0.0008, 0.0004, 0.0012, 0.0004],
+        [0.0000, 0.0008, 0.0010, 0.0012, 0.0004],
+        [0.0000, 0.0008, 0.0003, 0.0009, 0.0003],
+        [0.0000, 0.0008, 0.0005, 0.0012, 0.0008],
+        [0.0000, 0.0004, 0.0004, 0.0007, 0.0005],
+        [0.0000, 0.0008, 0.0008, 0.0014, 0.0009],
+        [0.0000, 0.0008, 0.0012, 0.0010, 0.0001],
+        [0.0000, 0.0008, 0.0012, 0.0009, 0.0003],
+        [0.0000, 0.0008, 0.0003, 0.0007, 0.0001],
+        [0.0000, 0.0007, 0.0012, 0.0011, 0.0002],
+        [0.0000, 0.0011, 0.0005, 0.0005, 0.0002]])
+torch.Size([32, 5, 651, 651])
+torch.Size([32, 5, 325, 325])
+torch.Size([32, 3, 325, 325])
+torch.Size([32, 3, 162, 162])
+torch.Size([32, 78732])
+torch.Size([32, 39366])
+torch.Size([32, 128])
+torch.Size([32, 2])
+Traceback (most recent call last):
+  File "/iitjhome/m22ma003/CV_Project/table_detection.py", line 305, in <module>
+    loss = criterion(outputs, labels)
+  File "/scratch/apps/anaconda3/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/scratch/apps/anaconda3/lib/python3.9/site-packages/torch/nn/modules/loss.py", line 1164, in forward
+    return F.cross_entropy(input, target, weight=self.weight,
+  File "/scratch/apps/anaconda3/lib/python3.9/site-packages/torch/nn/functional.py", line 3014, in cross_entropy
+    return torch._C._nn.cross_entropy_loss(input, target, weight, _Reduction.get_enum(reduction), ignore_index, label_smoothing)
+RuntimeError: 0D or 1D target tensor expected, multi-target not supported
